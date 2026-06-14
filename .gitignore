@@ -14,6 +14,10 @@ env/
 captures/
 software/captures/
 
+# Generated run artifacts in software/ root (canonical copies live in example_outputs/)
+software/results.csv
+software/*.png
+
 # OS / editor
 .DS_Store
 Thumbs.db
