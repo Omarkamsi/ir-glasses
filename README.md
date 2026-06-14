@@ -1,5 +1,7 @@
 # IR Counter-Surveillance Glasses
 
+[![tests](https://github.com/Omarkamsi/ir-glasses/actions/workflows/tests.yml/badge.svg)](https://github.com/Omarkamsi/ir-glasses/actions/workflows/tests.yml)
+
 A wearable device that emits modulated infrared light to disrupt non-consensual facial
 recognition, together with a deep-learning evaluation framework that measures **when and how
 well** the disruption actually defeats a face-recognition system.
