@@ -1,133 +1,991 @@
-intensity,seed,detected,recognized,score
-0.0,0,1,1,1.0
-0.0,1,1,1,1.0
-0.0,2,1,1,1.0
-0.0,3,1,1,1.0
-0.0,4,1,1,1.0
-0.0,5,1,1,1.0
-0.0,6,1,1,1.0
-0.0,7,1,1,1.0
-0.0,8,1,1,1.0
-0.0,9,1,1,1.0
-0.0,10,1,1,1.0
-0.0,11,1,1,1.0
-0.1,0,1,1,0.975233256816864
-0.1,1,1,1,0.9809614419937134
-0.1,2,1,1,0.981167733669281
-0.1,3,1,1,0.975556492805481
-0.1,4,1,1,0.9711505770683289
-0.1,5,1,1,0.9760286211967468
-0.1,6,1,1,0.970462441444397
-0.1,7,1,1,0.9763866066932678
-0.1,8,1,1,0.9713869690895081
-0.1,9,1,1,0.9716678857803345
-0.1,10,1,1,0.9799134135246277
-0.1,11,1,1,0.9762685894966125
-0.2,0,1,1,0.9318164587020874
-0.2,1,1,1,0.9410125017166138
-0.2,2,1,1,0.9414988160133362
-0.2,3,1,1,0.9327509999275208
-0.2,4,1,1,0.9026134014129639
-0.2,5,1,1,0.943597674369812
-0.2,6,1,1,0.9110877513885498
-0.2,7,1,1,0.9275769591331482
-0.2,8,1,1,0.9155724048614502
-0.2,9,1,1,0.9116017818450928
-0.2,10,1,1,0.9206104278564453
-0.2,11,1,1,0.9422290325164795
-0.3,0,1,1,0.8727742433547974
-0.3,1,1,1,0.871947169303894
-0.3,2,1,1,0.8704297542572021
-0.3,3,1,1,0.8725048303604126
-0.3,4,1,1,0.8225911855697632
-0.3,5,1,1,0.8923254609107971
-0.3,6,1,1,0.823879063129425
-0.3,7,1,1,0.8592094779014587
-0.3,8,1,1,0.8268753290176392
-0.3,9,1,1,0.8358606696128845
-0.3,10,1,1,0.8500837087631226
-0.3,11,1,1,0.8928202986717224
-0.4,0,1,1,0.7942406535148621
-0.4,1,1,1,0.802577018737793
-0.4,2,1,1,0.8035306334495544
-0.4,3,1,1,0.7937318682670593
-0.4,4,1,1,0.7732337117195129
-0.4,5,1,1,0.8464198112487793
-0.4,6,1,1,0.7832955718040466
-0.4,7,1,1,0.7976222038269043
-0.4,8,1,1,0.7772773504257202
-0.4,9,1,1,0.7869505882263184
-0.4,10,1,1,0.7568378448486328
-0.4,11,1,1,0.8003112077713013
-0.5,0,1,1,0.48253190517425537
-0.5,1,1,1,0.6242535710334778
-0.5,2,1,1,0.5985521078109741
-0.5,3,1,1,0.48266535997390747
-0.5,4,1,1,0.5926037430763245
-0.5,5,1,1,0.674408495426178
-0.5,6,1,1,0.49915340542793274
-0.5,7,1,1,0.643954336643219
-0.5,8,1,1,0.48912832140922546
-0.5,9,1,1,0.6205818057060242
-0.5,10,1,1,0.6016704440116882
-0.5,11,1,1,0.657971978187561
-0.6,0,1,0,0.35106897354125977
-0.6,1,1,1,0.44924670457839966
-0.6,2,1,1,0.4503423273563385
-0.6,3,1,0,0.3426731824874878
-0.6,4,1,1,0.46624448895454407
-0.6,5,1,1,0.612061083316803
-0.6,6,1,1,0.40926873683929443
-0.6,7,1,1,0.5757272839546204
-0.6,8,1,1,0.3951305150985718
-0.6,9,1,1,0.518866240978241
-0.6,10,1,0,0.3340807259082794
-0.6,11,1,1,0.6149120330810547
-0.7,0,1,0,0.2147040218114853
-0.7,1,1,0,0.33345547318458557
-0.7,2,1,0,0.3498370051383972
-0.7,3,1,0,0.2140592336654663
-0.7,4,1,0,0.35149094462394714
-0.7,5,1,1,0.4025648534297943
-0.7,6,1,0,0.25330623984336853
-0.7,7,1,0,0.355827659368515
-0.7,8,1,0,0.2472611367702484
-0.7,9,1,0,0.3598637580871582
-0.7,10,1,0,0.2504710257053375
-0.7,11,1,1,0.3877447247505188
-0.8,0,0,0,nan
-0.8,1,0,0,nan
-0.8,2,0,0,nan
-0.8,3,0,0,nan
-0.8,4,0,0,nan
-0.8,5,1,0,0.2153330147266388
-0.8,6,0,0,nan
-0.8,7,0,0,nan
-0.8,8,0,0,nan
-0.8,9,0,0,nan
-0.8,10,0,0,nan
-0.8,11,1,0,0.2510564625263214
-0.9,0,0,0,nan
-0.9,1,0,0,nan
-0.9,2,0,0,nan
-0.9,3,0,0,nan
-0.9,4,0,0,nan
-0.9,5,0,0,nan
-0.9,6,0,0,nan
-0.9,7,0,0,nan
-0.9,8,0,0,nan
-0.9,9,0,0,nan
-0.9,10,0,0,nan
-0.9,11,0,0,nan
-1.0,0,0,0,nan
-1.0,1,0,0,nan
-1.0,2,0,0,nan
-1.0,3,0,0,nan
-1.0,4,0,0,nan
-1.0,5,0,0,nan
-1.0,6,0,0,nan
-1.0,7,0,0,nan
-1.0,8,0,0,nan
-1.0,9,0,0,nan
-1.0,10,0,0,nan
-1.0,11,0,0,nan
+subject,intensity,seed,detected,recognized,score
+Jiang Zemin,0.0,0,1,1,0.755728006362915
+Jiang Zemin,0.1,0,1,1,0.6622257828712463
+Jiang Zemin,0.2,0,1,1,0.5774434804916382
+Jiang Zemin,0.3,0,1,1,0.471126526594162
+Jiang Zemin,0.4,0,1,0,0.029961220920085907
+Jiang Zemin,0.5,0,0,0,nan
+Jiang Zemin,0.6,0,0,0,nan
+Jiang Zemin,0.7,0,0,0,nan
+Jiang Zemin,0.8,0,0,0,nan
+Jiang Zemin,0.9,0,0,0,nan
+Jiang Zemin,1.0,0,0,0,nan
+Jiang Zemin,0.0,1,1,1,0.41972559690475464
+Jiang Zemin,0.1,1,1,1,0.36455973982810974
+Jiang Zemin,0.2,1,1,0,0.285578191280365
+Jiang Zemin,0.3,1,1,0,0.07293792068958282
+Jiang Zemin,0.4,1,0,0,nan
+Jiang Zemin,0.5,1,0,0,nan
+Jiang Zemin,0.6,1,0,0,nan
+Jiang Zemin,0.7,1,0,0,nan
+Jiang Zemin,0.8,1,0,0,nan
+Jiang Zemin,0.9,1,0,0,nan
+Jiang Zemin,1.0,1,0,0,nan
+Jiang Zemin,0.0,2,1,1,0.6679008603096008
+Jiang Zemin,0.1,2,1,1,0.5780710577964783
+Jiang Zemin,0.2,2,1,1,0.42490968108177185
+Jiang Zemin,0.3,2,1,0,0.2727324962615967
+Jiang Zemin,0.4,2,0,0,nan
+Jiang Zemin,0.5,2,0,0,nan
+Jiang Zemin,0.6,2,0,0,nan
+Jiang Zemin,0.7,2,0,0,nan
+Jiang Zemin,0.8,2,0,0,nan
+Jiang Zemin,0.9,2,0,0,nan
+Jiang Zemin,1.0,2,0,0,nan
+Jiang Zemin,0.0,3,1,1,0.4880807101726532
+Jiang Zemin,0.1,3,1,1,0.4831971526145935
+Jiang Zemin,0.2,3,1,0,0.2595997452735901
+Jiang Zemin,0.3,3,0,0,nan
+Jiang Zemin,0.4,3,0,0,nan
+Jiang Zemin,0.5,3,0,0,nan
+Jiang Zemin,0.6,3,0,0,nan
+Jiang Zemin,0.7,3,0,0,nan
+Jiang Zemin,0.8,3,0,0,nan
+Jiang Zemin,0.9,3,0,0,nan
+Jiang Zemin,1.0,3,0,0,nan
+Jiang Zemin,0.0,4,1,1,0.5796047449111938
+Jiang Zemin,0.1,4,1,1,0.5547770857810974
+Jiang Zemin,0.2,4,1,1,0.5170590281486511
+Jiang Zemin,0.3,4,1,0,0.28548693656921387
+Jiang Zemin,0.4,4,0,0,nan
+Jiang Zemin,0.5,4,0,0,nan
+Jiang Zemin,0.6,4,0,0,nan
+Jiang Zemin,0.7,4,0,0,nan
+Jiang Zemin,0.8,4,0,0,nan
+Jiang Zemin,0.9,4,0,0,nan
+Jiang Zemin,1.0,4,0,0,nan
+Jiang Zemin,0.0,5,1,1,0.6249611377716064
+Jiang Zemin,0.1,5,1,1,0.5381766557693481
+Jiang Zemin,0.2,5,1,1,0.44817960262298584
+Jiang Zemin,0.3,5,1,0,0.1650920808315277
+Jiang Zemin,0.4,5,0,0,nan
+Jiang Zemin,0.5,5,0,0,nan
+Jiang Zemin,0.6,5,0,0,nan
+Jiang Zemin,0.7,5,0,0,nan
+Jiang Zemin,0.8,5,0,0,nan
+Jiang Zemin,0.9,5,0,0,nan
+Jiang Zemin,1.0,5,0,0,nan
+John Negroponte,0.0,0,1,1,0.5438553094863892
+John Negroponte,0.1,0,1,1,0.5363951921463013
+John Negroponte,0.2,0,1,1,0.537058413028717
+John Negroponte,0.3,0,1,1,0.3952774107456207
+John Negroponte,0.4,0,1,0,0.10577603429555893
+John Negroponte,0.5,0,0,0,nan
+John Negroponte,0.6,0,0,0,nan
+John Negroponte,0.7,0,0,0,nan
+John Negroponte,0.8,0,0,0,nan
+John Negroponte,0.9,0,0,0,nan
+John Negroponte,1.0,0,0,0,nan
+John Negroponte,0.0,1,1,0,0.23675896227359772
+John Negroponte,0.1,1,1,0,0.17339558899402618
+John Negroponte,0.2,1,1,0,0.18405656516551971
+John Negroponte,0.3,1,1,0,0.1334068775177002
+John Negroponte,0.4,1,1,0,0.10468319803476334
+John Negroponte,0.5,1,0,0,nan
+John Negroponte,0.6,1,0,0,nan
+John Negroponte,0.7,1,0,0,nan
+John Negroponte,0.8,1,0,0,nan
+John Negroponte,0.9,1,0,0,nan
+John Negroponte,1.0,1,0,0,nan
+John Negroponte,0.0,2,1,1,0.5340790748596191
+John Negroponte,0.1,2,1,1,0.5017412304878235
+John Negroponte,0.2,2,1,1,0.44753408432006836
+John Negroponte,0.3,2,1,0,0.2869275212287903
+John Negroponte,0.4,2,0,0,nan
+John Negroponte,0.5,2,0,0,nan
+John Negroponte,0.6,2,0,0,nan
+John Negroponte,0.7,2,0,0,nan
+John Negroponte,0.8,2,0,0,nan
+John Negroponte,0.9,2,0,0,nan
+John Negroponte,1.0,2,0,0,nan
+John Negroponte,0.0,3,1,0,0.26442432403564453
+John Negroponte,0.1,3,1,0,0.24520455300807953
+John Negroponte,0.2,3,1,0,0.16918329894542694
+John Negroponte,0.3,3,1,0,0.2528441846370697
+John Negroponte,0.4,3,0,0,nan
+John Negroponte,0.5,3,0,0,nan
+John Negroponte,0.6,3,0,0,nan
+John Negroponte,0.7,3,0,0,nan
+John Negroponte,0.8,3,0,0,nan
+John Negroponte,0.9,3,0,0,nan
+John Negroponte,1.0,3,0,0,nan
+John Negroponte,0.0,4,1,1,0.5647960901260376
+John Negroponte,0.1,4,1,1,0.517516553401947
+John Negroponte,0.2,4,1,1,0.4365929961204529
+John Negroponte,0.3,4,1,0,0.3153930604457855
+John Negroponte,0.4,4,1,0,0.16753624379634857
+John Negroponte,0.5,4,0,0,nan
+John Negroponte,0.6,4,0,0,nan
+John Negroponte,0.7,4,0,0,nan
+John Negroponte,0.8,4,0,0,nan
+John Negroponte,0.9,4,0,0,nan
+John Negroponte,1.0,4,0,0,nan
+John Negroponte,0.0,5,1,1,0.6815295815467834
+John Negroponte,0.1,5,1,1,0.6118645668029785
+John Negroponte,0.2,5,1,1,0.4304752051830292
+John Negroponte,0.3,5,1,0,0.3418227732181549
+John Negroponte,0.4,5,0,0,nan
+John Negroponte,0.5,5,0,0,nan
+John Negroponte,0.6,5,0,0,nan
+John Negroponte,0.7,5,0,0,nan
+John Negroponte,0.8,5,0,0,nan
+John Negroponte,0.9,5,0,0,nan
+John Negroponte,1.0,5,0,0,nan
+Jose Maria Aznar,0.0,0,1,1,0.498752623796463
+Jose Maria Aznar,0.1,0,1,1,0.4591555893421173
+Jose Maria Aznar,0.2,0,1,1,0.414945513010025
+Jose Maria Aznar,0.3,0,1,0,0.33286425471305847
+Jose Maria Aznar,0.4,0,1,0,0.14374007284641266
+Jose Maria Aznar,0.5,0,0,0,nan
+Jose Maria Aznar,0.6,0,0,0,nan
+Jose Maria Aznar,0.7,0,0,0,nan
+Jose Maria Aznar,0.8,0,0,0,nan
+Jose Maria Aznar,0.9,0,0,0,nan
+Jose Maria Aznar,1.0,0,0,0,nan
+Jose Maria Aznar,0.0,1,1,1,0.44690412282943726
+Jose Maria Aznar,0.1,1,1,1,0.41280606389045715
+Jose Maria Aznar,0.2,1,1,0,0.36017313599586487
+Jose Maria Aznar,0.3,1,1,0,0.2189001888036728
+Jose Maria Aznar,0.4,1,1,0,0.08101552724838257
+Jose Maria Aznar,0.5,1,0,0,nan
+Jose Maria Aznar,0.6,1,0,0,nan
+Jose Maria Aznar,0.7,1,0,0,nan
+Jose Maria Aznar,0.8,1,0,0,nan
+Jose Maria Aznar,0.9,1,0,0,nan
+Jose Maria Aznar,1.0,1,0,0,nan
+Jose Maria Aznar,0.0,2,1,1,0.4474569261074066
+Jose Maria Aznar,0.1,2,1,1,0.5096555352210999
+Jose Maria Aznar,0.2,2,1,1,0.4654013514518738
+Jose Maria Aznar,0.3,2,1,1,0.41637423634529114
+Jose Maria Aznar,0.4,2,1,0,0.16774363815784454
+Jose Maria Aznar,0.5,2,0,0,nan
+Jose Maria Aznar,0.6,2,0,0,nan
+Jose Maria Aznar,0.7,2,0,0,nan
+Jose Maria Aznar,0.8,2,0,0,nan
+Jose Maria Aznar,0.9,2,0,0,nan
+Jose Maria Aznar,1.0,2,0,0,nan
+Jose Maria Aznar,0.0,3,1,1,0.4399016499519348
+Jose Maria Aznar,0.1,3,1,1,0.42818304896354675
+Jose Maria Aznar,0.2,3,1,1,0.39543068408966064
+Jose Maria Aznar,0.3,3,1,1,0.37743958830833435
+Jose Maria Aznar,0.4,3,1,0,0.2936725914478302
+Jose Maria Aznar,0.5,3,0,0,nan
+Jose Maria Aznar,0.6,3,0,0,nan
+Jose Maria Aznar,0.7,3,0,0,nan
+Jose Maria Aznar,0.8,3,0,0,nan
+Jose Maria Aznar,0.9,3,0,0,nan
+Jose Maria Aznar,1.0,3,0,0,nan
+Jose Maria Aznar,0.0,4,1,1,0.4509127140045166
+Jose Maria Aznar,0.1,4,1,1,0.44418904185295105
+Jose Maria Aznar,0.2,4,1,1,0.3885863423347473
+Jose Maria Aznar,0.3,4,1,0,0.3317010998725891
+Jose Maria Aznar,0.4,4,0,0,nan
+Jose Maria Aznar,0.5,4,0,0,nan
+Jose Maria Aznar,0.6,4,0,0,nan
+Jose Maria Aznar,0.7,4,0,0,nan
+Jose Maria Aznar,0.8,4,0,0,nan
+Jose Maria Aznar,0.9,4,0,0,nan
+Jose Maria Aznar,1.0,4,0,0,nan
+Jose Maria Aznar,0.0,5,1,1,0.38575494289398193
+Jose Maria Aznar,0.1,5,1,0,0.3599883019924164
+Jose Maria Aznar,0.2,5,1,1,0.3765544891357422
+Jose Maria Aznar,0.3,5,1,0,0.3340248167514801
+Jose Maria Aznar,0.4,5,0,0,nan
+Jose Maria Aznar,0.5,5,0,0,nan
+Jose Maria Aznar,0.6,5,0,0,nan
+Jose Maria Aznar,0.7,5,0,0,nan
+Jose Maria Aznar,0.8,5,0,0,nan
+Jose Maria Aznar,0.9,5,0,0,nan
+Jose Maria Aznar,1.0,5,0,0,nan
+Recep Tayyip Erdogan,0.0,0,1,1,0.3878880739212036
+Recep Tayyip Erdogan,0.1,0,1,0,0.3441535532474518
+Recep Tayyip Erdogan,0.2,0,1,0,0.2636950612068176
+Recep Tayyip Erdogan,0.3,0,1,0,0.1897396296262741
+Recep Tayyip Erdogan,0.4,0,1,0,0.07983259111642838
+Recep Tayyip Erdogan,0.5,0,0,0,nan
+Recep Tayyip Erdogan,0.6,0,0,0,nan
+Recep Tayyip Erdogan,0.7,0,0,0,nan
+Recep Tayyip Erdogan,0.8,0,0,0,nan
+Recep Tayyip Erdogan,0.9,0,0,0,nan
+Recep Tayyip Erdogan,1.0,0,0,0,nan
+Recep Tayyip Erdogan,0.0,1,1,0,0.20114372670650482
+Recep Tayyip Erdogan,0.1,1,1,0,0.20532108843326569
+Recep Tayyip Erdogan,0.2,1,1,0,0.117548368871212
+Recep Tayyip Erdogan,0.3,1,1,0,0.14134465157985687
+Recep Tayyip Erdogan,0.4,1,0,0,nan
+Recep Tayyip Erdogan,0.5,1,0,0,nan
+Recep Tayyip Erdogan,0.6,1,0,0,nan
+Recep Tayyip Erdogan,0.7,1,0,0,nan
+Recep Tayyip Erdogan,0.8,1,0,0,nan
+Recep Tayyip Erdogan,0.9,1,0,0,nan
+Recep Tayyip Erdogan,1.0,1,0,0,nan
+Recep Tayyip Erdogan,0.0,2,1,1,0.6427844166755676
+Recep Tayyip Erdogan,0.1,2,1,1,0.6348520517349243
+Recep Tayyip Erdogan,0.2,2,1,1,0.5069561004638672
+Recep Tayyip Erdogan,0.3,2,1,0,0.3567742109298706
+Recep Tayyip Erdogan,0.4,2,0,0,nan
+Recep Tayyip Erdogan,0.5,2,0,0,nan
+Recep Tayyip Erdogan,0.6,2,0,0,nan
+Recep Tayyip Erdogan,0.7,2,0,0,nan
+Recep Tayyip Erdogan,0.8,2,0,0,nan
+Recep Tayyip Erdogan,0.9,2,0,0,nan
+Recep Tayyip Erdogan,1.0,2,0,0,nan
+Recep Tayyip Erdogan,0.0,3,1,1,0.38984593749046326
+Recep Tayyip Erdogan,0.1,3,1,0,0.35821497440338135
+Recep Tayyip Erdogan,0.2,3,1,0,0.28707942366600037
+Recep Tayyip Erdogan,0.3,3,1,0,0.24885381758213043
+Recep Tayyip Erdogan,0.4,3,1,0,0.03499544784426689
+Recep Tayyip Erdogan,0.5,3,0,0,nan
+Recep Tayyip Erdogan,0.6,3,0,0,nan
+Recep Tayyip Erdogan,0.7,3,0,0,nan
+Recep Tayyip Erdogan,0.8,3,0,0,nan
+Recep Tayyip Erdogan,0.9,3,0,0,nan
+Recep Tayyip Erdogan,1.0,3,0,0,nan
+Recep Tayyip Erdogan,0.0,4,1,1,0.6635137796401978
+Recep Tayyip Erdogan,0.1,4,1,1,0.6477781534194946
+Recep Tayyip Erdogan,0.2,4,1,1,0.5797123908996582
+Recep Tayyip Erdogan,0.3,4,1,0,0.3507835865020752
+Recep Tayyip Erdogan,0.4,4,1,0,0.259092777967453
+Recep Tayyip Erdogan,0.5,4,0,0,nan
+Recep Tayyip Erdogan,0.6,4,0,0,nan
+Recep Tayyip Erdogan,0.7,4,0,0,nan
+Recep Tayyip Erdogan,0.8,4,0,0,nan
+Recep Tayyip Erdogan,0.9,4,0,0,nan
+Recep Tayyip Erdogan,1.0,4,0,0,nan
+Recep Tayyip Erdogan,0.0,5,1,1,0.5879580974578857
+Recep Tayyip Erdogan,0.1,5,1,1,0.4843001961708069
+Recep Tayyip Erdogan,0.2,5,1,1,0.4272739589214325
+Recep Tayyip Erdogan,0.3,5,1,1,0.38650235533714294
+Recep Tayyip Erdogan,0.4,5,0,0,nan
+Recep Tayyip Erdogan,0.5,5,0,0,nan
+Recep Tayyip Erdogan,0.6,5,0,0,nan
+Recep Tayyip Erdogan,0.7,5,0,0,nan
+Recep Tayyip Erdogan,0.8,5,0,0,nan
+Recep Tayyip Erdogan,0.9,5,0,0,nan
+Recep Tayyip Erdogan,1.0,5,0,0,nan
+Rudolph Giuliani,0.0,0,1,1,0.5389860272407532
+Rudolph Giuliani,0.1,0,1,1,0.43179598450660706
+Rudolph Giuliani,0.2,0,1,1,0.3895171582698822
+Rudolph Giuliani,0.3,0,1,1,0.3712332844734192
+Rudolph Giuliani,0.4,0,1,0,0.12452702224254608
+Rudolph Giuliani,0.5,0,0,0,nan
+Rudolph Giuliani,0.6,0,0,0,nan
+Rudolph Giuliani,0.7,0,0,0,nan
+Rudolph Giuliani,0.8,0,0,0,nan
+Rudolph Giuliani,0.9,0,0,0,nan
+Rudolph Giuliani,1.0,0,0,0,nan
+Rudolph Giuliani,0.0,1,1,1,0.6181471347808838
+Rudolph Giuliani,0.1,1,1,1,0.5837251543998718
+Rudolph Giuliani,0.2,1,1,1,0.45346447825431824
+Rudolph Giuliani,0.3,1,1,0,0.29388630390167236
+Rudolph Giuliani,0.4,1,1,0,-0.04256298020482063
+Rudolph Giuliani,0.5,1,0,0,nan
+Rudolph Giuliani,0.6,1,0,0,nan
+Rudolph Giuliani,0.7,1,0,0,nan
+Rudolph Giuliani,0.8,1,0,0,nan
+Rudolph Giuliani,0.9,1,0,0,nan
+Rudolph Giuliani,1.0,1,0,0,nan
+Rudolph Giuliani,0.0,2,1,1,0.4413589537143707
+Rudolph Giuliani,0.1,2,1,1,0.3917080760002136
+Rudolph Giuliani,0.2,2,1,0,0.3223000466823578
+Rudolph Giuliani,0.3,2,1,0,0.20174849033355713
+Rudolph Giuliani,0.4,2,0,0,nan
+Rudolph Giuliani,0.5,2,0,0,nan
+Rudolph Giuliani,0.6,2,0,0,nan
+Rudolph Giuliani,0.7,2,0,0,nan
+Rudolph Giuliani,0.8,2,0,0,nan
+Rudolph Giuliani,0.9,2,0,0,nan
+Rudolph Giuliani,1.0,2,0,0,nan
+Rudolph Giuliani,0.0,3,1,1,0.46818193793296814
+Rudolph Giuliani,0.1,3,1,1,0.43878889083862305
+Rudolph Giuliani,0.2,3,1,1,0.38783401250839233
+Rudolph Giuliani,0.3,3,1,0,0.31173059344291687
+Rudolph Giuliani,0.4,3,0,0,nan
+Rudolph Giuliani,0.5,3,0,0,nan
+Rudolph Giuliani,0.6,3,0,0,nan
+Rudolph Giuliani,0.7,3,0,0,nan
+Rudolph Giuliani,0.8,3,0,0,nan
+Rudolph Giuliani,0.9,3,0,0,nan
+Rudolph Giuliani,1.0,3,0,0,nan
+Rudolph Giuliani,0.0,4,1,1,0.6943416595458984
+Rudolph Giuliani,0.1,4,1,1,0.6613080501556396
+Rudolph Giuliani,0.2,4,1,1,0.5895581245422363
+Rudolph Giuliani,0.3,4,1,0,0.2555887699127197
+Rudolph Giuliani,0.4,4,0,0,nan
+Rudolph Giuliani,0.5,4,0,0,nan
+Rudolph Giuliani,0.6,4,0,0,nan
+Rudolph Giuliani,0.7,4,0,0,nan
+Rudolph Giuliani,0.8,4,0,0,nan
+Rudolph Giuliani,0.9,4,0,0,nan
+Rudolph Giuliani,1.0,4,0,0,nan
+Rudolph Giuliani,0.0,5,1,1,0.5770014524459839
+Rudolph Giuliani,0.1,5,1,1,0.5205218195915222
+Rudolph Giuliani,0.2,5,1,1,0.3923763632774353
+Rudolph Giuliani,0.3,5,1,0,0.15769296884536743
+Rudolph Giuliani,0.4,5,1,0,3.3084670576499775e-05
+Rudolph Giuliani,0.5,5,0,0,nan
+Rudolph Giuliani,0.6,5,0,0,nan
+Rudolph Giuliani,0.7,5,0,0,nan
+Rudolph Giuliani,0.8,5,0,0,nan
+Rudolph Giuliani,0.9,5,0,0,nan
+Rudolph Giuliani,1.0,5,0,0,nan
+Junichiro Koizumi,0.0,0,1,1,0.4266374409198761
+Junichiro Koizumi,0.1,0,1,1,0.42489394545555115
+Junichiro Koizumi,0.2,0,1,0,0.2938629984855652
+Junichiro Koizumi,0.3,0,0,0,nan
+Junichiro Koizumi,0.4,0,0,0,nan
+Junichiro Koizumi,0.5,0,0,0,nan
+Junichiro Koizumi,0.6,0,0,0,nan
+Junichiro Koizumi,0.7,0,0,0,nan
+Junichiro Koizumi,0.8,0,0,0,nan
+Junichiro Koizumi,0.9,0,0,0,nan
+Junichiro Koizumi,1.0,0,0,0,nan
+Junichiro Koizumi,0.0,1,1,1,0.44557178020477295
+Junichiro Koizumi,0.1,1,1,1,0.45611372590065
+Junichiro Koizumi,0.2,1,1,1,0.4220965504646301
+Junichiro Koizumi,0.3,1,1,0,0.3015778958797455
+Junichiro Koizumi,0.4,1,0,0,nan
+Junichiro Koizumi,0.5,1,0,0,nan
+Junichiro Koizumi,0.6,1,0,0,nan
+Junichiro Koizumi,0.7,1,0,0,nan
+Junichiro Koizumi,0.8,1,0,0,nan
+Junichiro Koizumi,0.9,1,0,0,nan
+Junichiro Koizumi,1.0,1,0,0,nan
+Junichiro Koizumi,0.0,2,1,1,0.6649866104125977
+Junichiro Koizumi,0.1,2,1,1,0.6482217907905579
+Junichiro Koizumi,0.2,2,1,1,0.5909623503684998
+Junichiro Koizumi,0.3,2,1,1,0.3879868686199188
+Junichiro Koizumi,0.4,2,0,0,nan
+Junichiro Koizumi,0.5,2,0,0,nan
+Junichiro Koizumi,0.6,2,0,0,nan
+Junichiro Koizumi,0.7,2,0,0,nan
+Junichiro Koizumi,0.8,2,0,0,nan
+Junichiro Koizumi,0.9,2,0,0,nan
+Junichiro Koizumi,1.0,2,0,0,nan
+Junichiro Koizumi,0.0,3,1,1,0.5703673362731934
+Junichiro Koizumi,0.1,3,1,1,0.4886356592178345
+Junichiro Koizumi,0.2,3,1,1,0.4756346642971039
+Junichiro Koizumi,0.3,3,1,1,0.4017082750797272
+Junichiro Koizumi,0.4,3,1,0,-0.057819873094558716
+Junichiro Koizumi,0.5,3,0,0,nan
+Junichiro Koizumi,0.6,3,0,0,nan
+Junichiro Koizumi,0.7,3,0,0,nan
+Junichiro Koizumi,0.8,3,0,0,nan
+Junichiro Koizumi,0.9,3,0,0,nan
+Junichiro Koizumi,1.0,3,0,0,nan
+Junichiro Koizumi,0.0,4,1,1,0.6243109107017517
+Junichiro Koizumi,0.1,4,1,1,0.6179066300392151
+Junichiro Koizumi,0.2,4,1,1,0.4984016418457031
+Junichiro Koizumi,0.3,4,1,1,0.40510696172714233
+Junichiro Koizumi,0.4,4,0,0,nan
+Junichiro Koizumi,0.5,4,0,0,nan
+Junichiro Koizumi,0.6,4,0,0,nan
+Junichiro Koizumi,0.7,4,0,0,nan
+Junichiro Koizumi,0.8,4,0,0,nan
+Junichiro Koizumi,0.9,4,0,0,nan
+Junichiro Koizumi,1.0,4,0,0,nan
+Junichiro Koizumi,0.0,5,1,1,0.5480572581291199
+Junichiro Koizumi,0.1,5,1,1,0.5311180353164673
+Junichiro Koizumi,0.2,5,1,1,0.3923526704311371
+Junichiro Koizumi,0.3,5,1,0,0.2211521565914154
+Junichiro Koizumi,0.4,5,0,0,nan
+Junichiro Koizumi,0.5,5,0,0,nan
+Junichiro Koizumi,0.6,5,0,0,nan
+Junichiro Koizumi,0.7,5,0,0,nan
+Junichiro Koizumi,0.8,5,0,0,nan
+Junichiro Koizumi,0.9,5,0,0,nan
+Junichiro Koizumi,1.0,5,0,0,nan
+David Beckham,0.0,0,1,1,0.3989156484603882
+David Beckham,0.1,0,1,1,0.41879764199256897
+David Beckham,0.2,0,1,1,0.41790032386779785
+David Beckham,0.3,0,1,1,0.40487951040267944
+David Beckham,0.4,0,1,0,0.14413931965827942
+David Beckham,0.5,0,0,0,nan
+David Beckham,0.6,0,0,0,nan
+David Beckham,0.7,0,0,0,nan
+David Beckham,0.8,0,0,0,nan
+David Beckham,0.9,0,0,0,nan
+David Beckham,1.0,0,0,0,nan
+David Beckham,0.0,1,1,0,0.34666502475738525
+David Beckham,0.1,1,1,0,0.3506620526313782
+David Beckham,0.2,1,1,0,0.2826729714870453
+David Beckham,0.3,1,1,0,0.22082217037677765
+David Beckham,0.4,1,1,0,0.14088314771652222
+David Beckham,0.5,1,0,0,nan
+David Beckham,0.6,1,0,0,nan
+David Beckham,0.7,1,0,0,nan
+David Beckham,0.8,1,0,0,nan
+David Beckham,0.9,1,0,0,nan
+David Beckham,1.0,1,0,0,nan
+David Beckham,0.0,2,1,0,0.26916778087615967
+David Beckham,0.1,2,1,0,0.2965220510959625
+David Beckham,0.2,2,1,0,0.30765753984451294
+David Beckham,0.3,2,1,0,0.07388240844011307
+David Beckham,0.4,2,0,0,nan
+David Beckham,0.5,2,0,0,nan
+David Beckham,0.6,2,0,0,nan
+David Beckham,0.7,2,0,0,nan
+David Beckham,0.8,2,0,0,nan
+David Beckham,0.9,2,0,0,nan
+David Beckham,1.0,2,0,0,nan
+David Beckham,0.0,3,1,0,0.3467469811439514
+David Beckham,0.1,3,1,0,0.3385027050971985
+David Beckham,0.2,3,1,0,0.24659639596939087
+David Beckham,0.3,3,1,0,0.17334957420825958
+David Beckham,0.4,3,1,0,-0.06667227298021317
+David Beckham,0.5,3,0,0,nan
+David Beckham,0.6,3,0,0,nan
+David Beckham,0.7,3,0,0,nan
+David Beckham,0.8,3,0,0,nan
+David Beckham,0.9,3,0,0,nan
+David Beckham,1.0,3,0,0,nan
+David Beckham,0.0,4,1,1,0.37350088357925415
+David Beckham,0.1,4,1,0,0.3024764060974121
+David Beckham,0.2,4,1,0,0.20636756718158722
+David Beckham,0.3,4,1,0,0.038289524614810944
+David Beckham,0.4,4,1,0,0.03848457708954811
+David Beckham,0.5,4,0,0,nan
+David Beckham,0.6,4,0,0,nan
+David Beckham,0.7,4,0,0,nan
+David Beckham,0.8,4,0,0,nan
+David Beckham,0.9,4,0,0,nan
+David Beckham,1.0,4,0,0,nan
+David Beckham,0.0,5,1,1,0.4222204387187958
+David Beckham,0.1,5,1,1,0.4422955811023712
+David Beckham,0.2,5,1,0,0.3349416255950928
+David Beckham,0.3,5,1,0,0.062169384211301804
+David Beckham,0.4,5,0,0,nan
+David Beckham,0.5,5,0,0,nan
+David Beckham,0.6,5,0,0,nan
+David Beckham,0.7,5,0,0,nan
+David Beckham,0.8,5,0,0,nan
+David Beckham,0.9,5,0,0,nan
+David Beckham,1.0,5,0,0,nan
+Nestor Kirchner,0.0,0,1,1,0.717576265335083
+Nestor Kirchner,0.1,0,1,1,0.6644487380981445
+Nestor Kirchner,0.2,0,1,1,0.5645865797996521
+Nestor Kirchner,0.3,0,1,1,0.40783289074897766
+Nestor Kirchner,0.4,0,0,0,nan
+Nestor Kirchner,0.5,0,0,0,nan
+Nestor Kirchner,0.6,0,0,0,nan
+Nestor Kirchner,0.7,0,0,0,nan
+Nestor Kirchner,0.8,0,0,0,nan
+Nestor Kirchner,0.9,0,0,0,nan
+Nestor Kirchner,1.0,0,0,0,nan
+Nestor Kirchner,0.0,1,1,1,0.6036428809165955
+Nestor Kirchner,0.1,1,1,1,0.5619327425956726
+Nestor Kirchner,0.2,1,1,1,0.534292995929718
+Nestor Kirchner,0.3,1,1,1,0.4336444139480591
+Nestor Kirchner,0.4,1,0,0,nan
+Nestor Kirchner,0.5,1,0,0,nan
+Nestor Kirchner,0.6,1,0,0,nan
+Nestor Kirchner,0.7,1,0,0,nan
+Nestor Kirchner,0.8,1,0,0,nan
+Nestor Kirchner,0.9,1,0,0,nan
+Nestor Kirchner,1.0,1,0,0,nan
+Nestor Kirchner,0.0,2,1,1,0.5788635015487671
+Nestor Kirchner,0.1,2,1,1,0.5514240860939026
+Nestor Kirchner,0.2,2,1,1,0.45506471395492554
+Nestor Kirchner,0.3,2,1,1,0.42164498567581177
+Nestor Kirchner,0.4,2,0,0,nan
+Nestor Kirchner,0.5,2,0,0,nan
+Nestor Kirchner,0.6,2,0,0,nan
+Nestor Kirchner,0.7,2,0,0,nan
+Nestor Kirchner,0.8,2,0,0,nan
+Nestor Kirchner,0.9,2,0,0,nan
+Nestor Kirchner,1.0,2,0,0,nan
+Nestor Kirchner,0.0,3,1,1,0.6687796711921692
+Nestor Kirchner,0.1,3,1,1,0.6285762786865234
+Nestor Kirchner,0.2,3,1,1,0.6096434593200684
+Nestor Kirchner,0.3,3,1,1,0.48535051941871643
+Nestor Kirchner,0.4,3,1,0,0.14786648750305176
+Nestor Kirchner,0.5,3,0,0,nan
+Nestor Kirchner,0.6,3,0,0,nan
+Nestor Kirchner,0.7,3,0,0,nan
+Nestor Kirchner,0.8,3,0,0,nan
+Nestor Kirchner,0.9,3,0,0,nan
+Nestor Kirchner,1.0,3,0,0,nan
+Nestor Kirchner,0.0,4,1,1,0.7142036557197571
+Nestor Kirchner,0.1,4,1,1,0.6710898280143738
+Nestor Kirchner,0.2,4,1,1,0.6139830946922302
+Nestor Kirchner,0.3,4,1,0,0.15446236729621887
+Nestor Kirchner,0.4,4,0,0,nan
+Nestor Kirchner,0.5,4,0,0,nan
+Nestor Kirchner,0.6,4,0,0,nan
+Nestor Kirchner,0.7,4,0,0,nan
+Nestor Kirchner,0.8,4,0,0,nan
+Nestor Kirchner,0.9,4,0,0,nan
+Nestor Kirchner,1.0,4,0,0,nan
+Nestor Kirchner,0.0,5,1,1,0.6234849095344543
+Nestor Kirchner,0.1,5,1,1,0.5511288046836853
+Nestor Kirchner,0.2,5,1,1,0.5089266300201416
+Nestor Kirchner,0.3,5,1,0,0.3416271507740021
+Nestor Kirchner,0.4,5,0,0,nan
+Nestor Kirchner,0.5,5,0,0,nan
+Nestor Kirchner,0.6,5,0,0,nan
+Nestor Kirchner,0.7,5,0,0,nan
+Nestor Kirchner,0.8,5,0,0,nan
+Nestor Kirchner,0.9,5,0,0,nan
+Nestor Kirchner,1.0,5,0,0,nan
+Amelie Mauresmo,0.0,0,1,1,0.5915941596031189
+Amelie Mauresmo,0.1,0,1,1,0.5481593012809753
+Amelie Mauresmo,0.2,0,1,1,0.5195005536079407
+Amelie Mauresmo,0.3,0,1,1,0.39319437742233276
+Amelie Mauresmo,0.4,0,1,0,0.1380663365125656
+Amelie Mauresmo,0.5,0,0,0,nan
+Amelie Mauresmo,0.6,0,0,0,nan
+Amelie Mauresmo,0.7,0,0,0,nan
+Amelie Mauresmo,0.8,0,0,0,nan
+Amelie Mauresmo,0.9,0,0,0,nan
+Amelie Mauresmo,1.0,0,0,0,nan
+Amelie Mauresmo,0.0,1,1,1,0.709639847278595
+Amelie Mauresmo,0.1,1,1,1,0.6423956155776978
+Amelie Mauresmo,0.2,1,1,1,0.5487316846847534
+Amelie Mauresmo,0.3,1,1,1,0.4260467290878296
+Amelie Mauresmo,0.4,1,0,0,nan
+Amelie Mauresmo,0.5,1,0,0,nan
+Amelie Mauresmo,0.6,1,0,0,nan
+Amelie Mauresmo,0.7,1,0,0,nan
+Amelie Mauresmo,0.8,1,0,0,nan
+Amelie Mauresmo,0.9,1,0,0,nan
+Amelie Mauresmo,1.0,1,0,0,nan
+Amelie Mauresmo,0.0,2,1,1,0.510119616985321
+Amelie Mauresmo,0.1,2,1,1,0.4537768065929413
+Amelie Mauresmo,0.2,2,1,1,0.3686048686504364
+Amelie Mauresmo,0.3,2,1,0,0.26775893568992615
+Amelie Mauresmo,0.4,2,1,0,0.07657016068696976
+Amelie Mauresmo,0.5,2,0,0,nan
+Amelie Mauresmo,0.6,2,0,0,nan
+Amelie Mauresmo,0.7,2,0,0,nan
+Amelie Mauresmo,0.8,2,0,0,nan
+Amelie Mauresmo,0.9,2,0,0,nan
+Amelie Mauresmo,1.0,2,0,0,nan
+Amelie Mauresmo,0.0,3,1,1,0.7284687757492065
+Amelie Mauresmo,0.1,3,1,1,0.6682317852973938
+Amelie Mauresmo,0.2,3,1,1,0.5783924460411072
+Amelie Mauresmo,0.3,3,1,1,0.3852328956127167
+Amelie Mauresmo,0.4,3,1,0,0.16182401776313782
+Amelie Mauresmo,0.5,3,0,0,nan
+Amelie Mauresmo,0.6,3,0,0,nan
+Amelie Mauresmo,0.7,3,0,0,nan
+Amelie Mauresmo,0.8,3,0,0,nan
+Amelie Mauresmo,0.9,3,0,0,nan
+Amelie Mauresmo,1.0,3,0,0,nan
+Amelie Mauresmo,0.0,4,1,1,0.5584156513214111
+Amelie Mauresmo,0.1,4,1,1,0.5088901519775391
+Amelie Mauresmo,0.2,4,1,1,0.3652147352695465
+Amelie Mauresmo,0.3,4,1,0,0.22180773317813873
+Amelie Mauresmo,0.4,4,0,0,nan
+Amelie Mauresmo,0.5,4,0,0,nan
+Amelie Mauresmo,0.6,4,0,0,nan
+Amelie Mauresmo,0.7,4,0,0,nan
+Amelie Mauresmo,0.8,4,0,0,nan
+Amelie Mauresmo,0.9,4,0,0,nan
+Amelie Mauresmo,1.0,4,0,0,nan
+Amelie Mauresmo,0.0,5,1,1,0.48601070046424866
+Amelie Mauresmo,0.1,5,1,1,0.46323660016059875
+Amelie Mauresmo,0.2,5,1,0,0.31837624311447144
+Amelie Mauresmo,0.3,5,1,0,0.18165740370750427
+Amelie Mauresmo,0.4,5,0,0,nan
+Amelie Mauresmo,0.5,5,0,0,nan
+Amelie Mauresmo,0.6,5,0,0,nan
+Amelie Mauresmo,0.7,5,0,0,nan
+Amelie Mauresmo,0.8,5,0,0,nan
+Amelie Mauresmo,0.9,5,0,0,nan
+Amelie Mauresmo,1.0,5,0,0,nan
+Michael Bloomberg,0.0,0,1,1,0.5840006470680237
+Michael Bloomberg,0.1,0,1,1,0.4083009362220764
+Michael Bloomberg,0.2,0,1,0,0.34857314825057983
+Michael Bloomberg,0.3,0,1,0,0.06727082282304764
+Michael Bloomberg,0.4,0,0,0,nan
+Michael Bloomberg,0.5,0,0,0,nan
+Michael Bloomberg,0.6,0,0,0,nan
+Michael Bloomberg,0.7,0,0,0,nan
+Michael Bloomberg,0.8,0,0,0,nan
+Michael Bloomberg,0.9,0,0,0,nan
+Michael Bloomberg,1.0,0,0,0,nan
+Michael Bloomberg,0.0,1,1,1,0.5677706599235535
+Michael Bloomberg,0.1,1,1,1,0.4841598868370056
+Michael Bloomberg,0.2,1,1,1,0.39923909306526184
+Michael Bloomberg,0.3,1,1,0,0.28784599900245667
+Michael Bloomberg,0.4,1,0,0,nan
+Michael Bloomberg,0.5,1,0,0,nan
+Michael Bloomberg,0.6,1,0,0,nan
+Michael Bloomberg,0.7,1,0,0,nan
+Michael Bloomberg,0.8,1,0,0,nan
+Michael Bloomberg,0.9,1,0,0,nan
+Michael Bloomberg,1.0,1,0,0,nan
+Michael Bloomberg,0.0,2,1,1,0.5827232599258423
+Michael Bloomberg,0.1,2,1,1,0.4809853732585907
+Michael Bloomberg,0.2,2,1,0,0.3290609121322632
+Michael Bloomberg,0.3,2,1,0,-0.0071507045067846775
+Michael Bloomberg,0.4,2,0,0,nan
+Michael Bloomberg,0.5,2,0,0,nan
+Michael Bloomberg,0.6,2,0,0,nan
+Michael Bloomberg,0.7,2,0,0,nan
+Michael Bloomberg,0.8,2,0,0,nan
+Michael Bloomberg,0.9,2,0,0,nan
+Michael Bloomberg,1.0,2,0,0,nan
+Michael Bloomberg,0.0,3,1,1,0.5320813655853271
+Michael Bloomberg,0.1,3,1,1,0.5329763293266296
+Michael Bloomberg,0.2,3,1,1,0.37400105595588684
+Michael Bloomberg,0.3,3,1,0,0.024514494463801384
+Michael Bloomberg,0.4,3,0,0,nan
+Michael Bloomberg,0.5,3,0,0,nan
+Michael Bloomberg,0.6,3,0,0,nan
+Michael Bloomberg,0.7,3,0,0,nan
+Michael Bloomberg,0.8,3,0,0,nan
+Michael Bloomberg,0.9,3,0,0,nan
+Michael Bloomberg,1.0,3,0,0,nan
+Michael Bloomberg,0.0,4,1,1,0.600687563419342
+Michael Bloomberg,0.1,4,1,1,0.5600811839103699
+Michael Bloomberg,0.2,4,1,1,0.38672399520874023
+Michael Bloomberg,0.3,4,1,0,0.1327609121799469
+Michael Bloomberg,0.4,4,0,0,nan
+Michael Bloomberg,0.5,4,0,0,nan
+Michael Bloomberg,0.6,4,0,0,nan
+Michael Bloomberg,0.7,4,0,0,nan
+Michael Bloomberg,0.8,4,0,0,nan
+Michael Bloomberg,0.9,4,0,0,nan
+Michael Bloomberg,1.0,4,0,0,nan
+Michael Bloomberg,0.0,5,1,1,0.6676743626594543
+Michael Bloomberg,0.1,5,1,1,0.5858720541000366
+Michael Bloomberg,0.2,5,1,1,0.5034692883491516
+Michael Bloomberg,0.3,5,1,0,0.2883497476577759
+Michael Bloomberg,0.4,5,0,0,nan
+Michael Bloomberg,0.5,5,0,0,nan
+Michael Bloomberg,0.6,5,0,0,nan
+Michael Bloomberg,0.7,5,0,0,nan
+Michael Bloomberg,0.8,5,0,0,nan
+Michael Bloomberg,0.9,5,0,0,nan
+Michael Bloomberg,1.0,5,0,0,nan
+Jennifer Aniston,0.0,0,1,1,0.42372235655784607
+Jennifer Aniston,0.1,0,1,0,0.32825157046318054
+Jennifer Aniston,0.2,0,1,0,0.23694466054439545
+Jennifer Aniston,0.3,0,1,0,0.20312047004699707
+Jennifer Aniston,0.4,0,0,0,nan
+Jennifer Aniston,0.5,0,0,0,nan
+Jennifer Aniston,0.6,0,0,0,nan
+Jennifer Aniston,0.7,0,0,0,nan
+Jennifer Aniston,0.8,0,0,0,nan
+Jennifer Aniston,0.9,0,0,0,nan
+Jennifer Aniston,1.0,0,0,0,nan
+Jennifer Aniston,0.0,1,1,1,0.46623939275741577
+Jennifer Aniston,0.1,1,1,1,0.47316402196884155
+Jennifer Aniston,0.2,1,1,1,0.42478302121162415
+Jennifer Aniston,0.3,1,1,0,0.09353314340114594
+Jennifer Aniston,0.4,1,0,0,nan
+Jennifer Aniston,0.5,1,0,0,nan
+Jennifer Aniston,0.6,1,0,0,nan
+Jennifer Aniston,0.7,1,0,0,nan
+Jennifer Aniston,0.8,1,0,0,nan
+Jennifer Aniston,0.9,1,0,0,nan
+Jennifer Aniston,1.0,1,0,0,nan
+Jennifer Aniston,0.0,2,1,1,0.396376371383667
+Jennifer Aniston,0.1,2,1,1,0.3741406202316284
+Jennifer Aniston,0.2,2,1,1,0.3693327009677887
+Jennifer Aniston,0.3,2,1,0,0.24056583642959595
+Jennifer Aniston,0.4,2,0,0,nan
+Jennifer Aniston,0.5,2,0,0,nan
+Jennifer Aniston,0.6,2,0,0,nan
+Jennifer Aniston,0.7,2,0,0,nan
+Jennifer Aniston,0.8,2,0,0,nan
+Jennifer Aniston,0.9,2,0,0,nan
+Jennifer Aniston,1.0,2,0,0,nan
+Jennifer Aniston,0.0,3,1,1,0.40500906109809875
+Jennifer Aniston,0.1,3,1,1,0.4030400812625885
+Jennifer Aniston,0.2,3,1,1,0.40163418650627136
+Jennifer Aniston,0.3,3,1,0,0.22133101522922516
+Jennifer Aniston,0.4,3,0,0,nan
+Jennifer Aniston,0.5,3,0,0,nan
+Jennifer Aniston,0.6,3,0,0,nan
+Jennifer Aniston,0.7,3,0,0,nan
+Jennifer Aniston,0.8,3,0,0,nan
+Jennifer Aniston,0.9,3,0,0,nan
+Jennifer Aniston,1.0,3,0,0,nan
+Jennifer Aniston,0.0,4,1,1,0.3998550474643707
+Jennifer Aniston,0.1,4,1,1,0.41422370076179504
+Jennifer Aniston,0.2,4,1,1,0.38540658354759216
+Jennifer Aniston,0.3,4,1,0,0.32623371481895447
+Jennifer Aniston,0.4,4,0,0,nan
+Jennifer Aniston,0.5,4,0,0,nan
+Jennifer Aniston,0.6,4,0,0,nan
+Jennifer Aniston,0.7,4,0,0,nan
+Jennifer Aniston,0.8,4,0,0,nan
+Jennifer Aniston,0.9,4,0,0,nan
+Jennifer Aniston,1.0,4,0,0,nan
+Jennifer Aniston,0.0,5,1,1,0.46102461218833923
+Jennifer Aniston,0.1,5,1,1,0.533430814743042
+Jennifer Aniston,0.2,5,1,1,0.46982869505882263
+Jennifer Aniston,0.3,5,1,0,0.28942057490348816
+Jennifer Aniston,0.4,5,0,0,nan
+Jennifer Aniston,0.5,5,0,0,nan
+Jennifer Aniston,0.6,5,0,0,nan
+Jennifer Aniston,0.7,5,0,0,nan
+Jennifer Aniston,0.8,5,0,0,nan
+Jennifer Aniston,0.9,5,0,0,nan
+Jennifer Aniston,1.0,5,0,0,nan
+Angelina Jolie,0.0,0,1,1,0.6926658749580383
+Angelina Jolie,0.1,0,1,1,0.6737606525421143
+Angelina Jolie,0.2,0,1,1,0.5564975142478943
+Angelina Jolie,0.3,0,1,1,0.473626971244812
+Angelina Jolie,0.4,0,1,0,0.20983214676380157
+Angelina Jolie,0.5,0,0,0,nan
+Angelina Jolie,0.6,0,0,0,nan
+Angelina Jolie,0.7,0,0,0,nan
+Angelina Jolie,0.8,0,0,0,nan
+Angelina Jolie,0.9,0,0,0,nan
+Angelina Jolie,1.0,0,0,0,nan
+Angelina Jolie,0.0,1,1,1,0.5168138742446899
+Angelina Jolie,0.1,1,1,1,0.4341607093811035
+Angelina Jolie,0.2,1,1,1,0.3752063512802124
+Angelina Jolie,0.3,1,1,0,0.3444308936595917
+Angelina Jolie,0.4,1,0,0,nan
+Angelina Jolie,0.5,1,0,0,nan
+Angelina Jolie,0.6,1,0,0,nan
+Angelina Jolie,0.7,1,0,0,nan
+Angelina Jolie,0.8,1,0,0,nan
+Angelina Jolie,0.9,1,0,0,nan
+Angelina Jolie,1.0,1,0,0,nan
+Angelina Jolie,0.0,2,1,1,0.5369266271591187
+Angelina Jolie,0.1,2,1,1,0.4984647333621979
+Angelina Jolie,0.2,2,1,1,0.4317954480648041
+Angelina Jolie,0.3,2,1,0,0.26777392625808716
+Angelina Jolie,0.4,2,1,0,0.13882224261760712
+Angelina Jolie,0.5,2,0,0,nan
+Angelina Jolie,0.6,2,0,0,nan
+Angelina Jolie,0.7,2,0,0,nan
+Angelina Jolie,0.8,2,0,0,nan
+Angelina Jolie,0.9,2,0,0,nan
+Angelina Jolie,1.0,2,0,0,nan
+Angelina Jolie,0.0,3,1,0,0.32690370082855225
+Angelina Jolie,0.1,3,1,0,0.3181576430797577
+Angelina Jolie,0.2,3,1,0,0.2676889896392822
+Angelina Jolie,0.3,3,1,0,0.29388922452926636
+Angelina Jolie,0.4,3,1,0,0.2045827955007553
+Angelina Jolie,0.5,3,0,0,nan
+Angelina Jolie,0.6,3,0,0,nan
+Angelina Jolie,0.7,3,0,0,nan
+Angelina Jolie,0.8,3,0,0,nan
+Angelina Jolie,0.9,3,0,0,nan
+Angelina Jolie,1.0,3,0,0,nan
+Angelina Jolie,0.0,4,1,1,0.4947164058685303
+Angelina Jolie,0.1,4,1,1,0.44672462344169617
+Angelina Jolie,0.2,4,1,1,0.43959999084472656
+Angelina Jolie,0.3,4,1,1,0.39184415340423584
+Angelina Jolie,0.4,4,0,0,nan
+Angelina Jolie,0.5,4,0,0,nan
+Angelina Jolie,0.6,4,0,0,nan
+Angelina Jolie,0.7,4,0,0,nan
+Angelina Jolie,0.8,4,0,0,nan
+Angelina Jolie,0.9,4,0,0,nan
+Angelina Jolie,1.0,4,0,0,nan
+Angelina Jolie,0.0,5,1,1,0.5617693662643433
+Angelina Jolie,0.1,5,1,1,0.5065383911132812
+Angelina Jolie,0.2,5,1,1,0.4796678423881531
+Angelina Jolie,0.3,5,1,1,0.45040056109428406
+Angelina Jolie,0.4,5,0,0,nan
+Angelina Jolie,0.5,5,0,0,nan
+Angelina Jolie,0.6,5,0,0,nan
+Angelina Jolie,0.7,5,0,0,nan
+Angelina Jolie,0.8,5,0,0,nan
+Angelina Jolie,0.9,5,0,0,nan
+Angelina Jolie,1.0,5,0,0,nan
+Colin Powell,0.0,0,1,1,0.6041809916496277
+Colin Powell,0.1,0,1,1,0.5688477158546448
+Colin Powell,0.2,0,1,1,0.4378868341445923
+Colin Powell,0.3,0,1,0,0.3377157747745514
+Colin Powell,0.4,0,0,0,nan
+Colin Powell,0.5,0,0,0,nan
+Colin Powell,0.6,0,0,0,nan
+Colin Powell,0.7,0,0,0,nan
+Colin Powell,0.8,0,0,0,nan
+Colin Powell,0.9,0,0,0,nan
+Colin Powell,1.0,0,0,0,nan
+Colin Powell,0.0,1,1,1,0.69610196352005
+Colin Powell,0.1,1,1,1,0.6714251637458801
+Colin Powell,0.2,1,1,1,0.5880611538887024
+Colin Powell,0.3,1,1,0,0.2618240714073181
+Colin Powell,0.4,1,0,0,nan
+Colin Powell,0.5,1,0,0,nan
+Colin Powell,0.6,1,0,0,nan
+Colin Powell,0.7,1,0,0,nan
+Colin Powell,0.8,1,0,0,nan
+Colin Powell,0.9,1,0,0,nan
+Colin Powell,1.0,1,0,0,nan
+Colin Powell,0.0,2,1,1,0.5942032933235168
+Colin Powell,0.1,2,1,1,0.5704426169395447
+Colin Powell,0.2,2,1,1,0.5312520265579224
+Colin Powell,0.3,2,1,1,0.3800201416015625
+Colin Powell,0.4,2,1,0,0.061265502125024796
+Colin Powell,0.5,2,0,0,nan
+Colin Powell,0.6,2,0,0,nan
+Colin Powell,0.7,2,0,0,nan
+Colin Powell,0.8,2,0,0,nan
+Colin Powell,0.9,2,0,0,nan
+Colin Powell,1.0,2,0,0,nan
+Colin Powell,0.0,3,1,1,0.6225436925888062
+Colin Powell,0.1,3,1,1,0.5986207127571106
+Colin Powell,0.2,3,1,1,0.49886807799339294
+Colin Powell,0.3,3,1,0,0.26774507761001587
+Colin Powell,0.4,3,0,0,nan
+Colin Powell,0.5,3,0,0,nan
+Colin Powell,0.6,3,0,0,nan
+Colin Powell,0.7,3,0,0,nan
+Colin Powell,0.8,3,0,0,nan
+Colin Powell,0.9,3,0,0,nan
+Colin Powell,1.0,3,0,0,nan
+Colin Powell,0.0,4,1,1,0.5668073892593384
+Colin Powell,0.1,4,1,1,0.5172961354255676
+Colin Powell,0.2,4,1,1,0.4479605257511139
+Colin Powell,0.3,4,1,0,0.2557249665260315
+Colin Powell,0.4,4,0,0,nan
+Colin Powell,0.5,4,0,0,nan
+Colin Powell,0.6,4,0,0,nan
+Colin Powell,0.7,4,0,0,nan
+Colin Powell,0.8,4,0,0,nan
+Colin Powell,0.9,4,0,0,nan
+Colin Powell,1.0,4,0,0,nan
+Colin Powell,0.0,5,1,1,0.8115140795707703
+Colin Powell,0.1,5,1,1,0.7700037360191345
+Colin Powell,0.2,5,1,1,0.6466950178146362
+Colin Powell,0.3,5,1,1,0.5222778916358948
+Colin Powell,0.4,5,0,0,nan
+Colin Powell,0.5,5,0,0,nan
+Colin Powell,0.6,5,0,0,nan
+Colin Powell,0.7,5,0,0,nan
+Colin Powell,0.8,5,0,0,nan
+Colin Powell,0.9,5,0,0,nan
+Colin Powell,1.0,5,0,0,nan
+Mahmoud Abbas,0.0,0,1,1,0.5656553506851196
+Mahmoud Abbas,0.1,0,1,1,0.5076450109481812
+Mahmoud Abbas,0.2,0,1,1,0.48468637466430664
+Mahmoud Abbas,0.3,0,1,0,0.357210248708725
+Mahmoud Abbas,0.4,0,0,0,nan
+Mahmoud Abbas,0.5,0,0,0,nan
+Mahmoud Abbas,0.6,0,0,0,nan
+Mahmoud Abbas,0.7,0,0,0,nan
+Mahmoud Abbas,0.8,0,0,0,nan
+Mahmoud Abbas,0.9,0,0,0,nan
+Mahmoud Abbas,1.0,0,0,0,nan
+Mahmoud Abbas,0.0,1,1,1,0.4008648991584778
+Mahmoud Abbas,0.1,1,1,1,0.3746151924133301
+Mahmoud Abbas,0.2,1,1,0,0.36110055446624756
+Mahmoud Abbas,0.3,1,1,0,0.2528337836265564
+Mahmoud Abbas,0.4,1,0,0,nan
+Mahmoud Abbas,0.5,1,0,0,nan
+Mahmoud Abbas,0.6,1,0,0,nan
+Mahmoud Abbas,0.7,1,0,0,nan
+Mahmoud Abbas,0.8,1,0,0,nan
+Mahmoud Abbas,0.9,1,0,0,nan
+Mahmoud Abbas,1.0,1,0,0,nan
+Mahmoud Abbas,0.0,2,1,1,0.5212254524230957
+Mahmoud Abbas,0.1,2,1,1,0.46621108055114746
+Mahmoud Abbas,0.2,2,1,1,0.363025426864624
+Mahmoud Abbas,0.3,2,1,0,0.15840815007686615
+Mahmoud Abbas,0.4,2,0,0,nan
+Mahmoud Abbas,0.5,2,0,0,nan
+Mahmoud Abbas,0.6,2,0,0,nan
+Mahmoud Abbas,0.7,2,0,0,nan
+Mahmoud Abbas,0.8,2,0,0,nan
+Mahmoud Abbas,0.9,2,0,0,nan
+Mahmoud Abbas,1.0,2,0,0,nan
+Mahmoud Abbas,0.0,3,1,1,0.6386588215827942
+Mahmoud Abbas,0.1,3,1,1,0.5829250812530518
+Mahmoud Abbas,0.2,3,1,1,0.47847604751586914
+Mahmoud Abbas,0.3,3,1,0,0.30042892694473267
+Mahmoud Abbas,0.4,3,1,0,-0.04278651624917984
+Mahmoud Abbas,0.5,3,0,0,nan
+Mahmoud Abbas,0.6,3,0,0,nan
+Mahmoud Abbas,0.7,3,0,0,nan
+Mahmoud Abbas,0.8,3,0,0,nan
+Mahmoud Abbas,0.9,3,0,0,nan
+Mahmoud Abbas,1.0,3,0,0,nan
+Mahmoud Abbas,0.0,4,1,1,0.4073657989501953
+Mahmoud Abbas,0.1,4,1,1,0.418027400970459
+Mahmoud Abbas,0.2,4,1,1,0.4130212962627411
+Mahmoud Abbas,0.3,4,1,0,0.3378363847732544
+Mahmoud Abbas,0.4,4,1,0,0.19332963228225708
+Mahmoud Abbas,0.5,4,0,0,nan
+Mahmoud Abbas,0.6,4,0,0,nan
+Mahmoud Abbas,0.7,4,0,0,nan
+Mahmoud Abbas,0.8,4,0,0,nan
+Mahmoud Abbas,0.9,4,0,0,nan
+Mahmoud Abbas,1.0,4,0,0,nan
+Mahmoud Abbas,0.0,5,1,1,0.5847801566123962
+Mahmoud Abbas,0.1,5,1,1,0.5641373991966248
+Mahmoud Abbas,0.2,5,1,1,0.46197012066841125
+Mahmoud Abbas,0.3,5,1,1,0.39060232043266296
+Mahmoud Abbas,0.4,5,1,0,0.20379887521266937
+Mahmoud Abbas,0.5,5,0,0,nan
+Mahmoud Abbas,0.6,5,0,0,nan
+Mahmoud Abbas,0.7,5,0,0,nan
+Mahmoud Abbas,0.8,5,0,0,nan
+Mahmoud Abbas,0.9,5,0,0,nan
+Mahmoud Abbas,1.0,5,0,0,nan
+Jennifer Lopez,0.0,0,1,1,0.444840669631958
+Jennifer Lopez,0.1,0,1,1,0.46150505542755127
+Jennifer Lopez,0.2,0,1,1,0.4594998061656952
+Jennifer Lopez,0.3,0,1,0,0.1991077959537506
+Jennifer Lopez,0.4,0,1,0,0.13103355467319489
+Jennifer Lopez,0.5,0,0,0,nan
+Jennifer Lopez,0.6,0,0,0,nan
+Jennifer Lopez,0.7,0,0,0,nan
+Jennifer Lopez,0.8,0,0,0,nan
+Jennifer Lopez,0.9,0,0,0,nan
+Jennifer Lopez,1.0,0,0,0,nan
+Jennifer Lopez,0.0,1,1,0,0.3064005970954895
+Jennifer Lopez,0.1,1,1,0,0.32925885915756226
+Jennifer Lopez,0.2,1,1,0,0.1425047218799591
+Jennifer Lopez,0.3,1,0,0,nan
+Jennifer Lopez,0.4,1,0,0,nan
+Jennifer Lopez,0.5,1,0,0,nan
+Jennifer Lopez,0.6,1,0,0,nan
+Jennifer Lopez,0.7,1,0,0,nan
+Jennifer Lopez,0.8,1,0,0,nan
+Jennifer Lopez,0.9,1,0,0,nan
+Jennifer Lopez,1.0,1,0,0,nan
+Jennifer Lopez,0.0,2,1,1,0.3744163513183594
+Jennifer Lopez,0.1,2,1,1,0.4491100609302521
+Jennifer Lopez,0.2,2,1,0,0.3185316324234009
+Jennifer Lopez,0.3,2,1,0,0.1075887605547905
+Jennifer Lopez,0.4,2,0,0,nan
+Jennifer Lopez,0.5,2,0,0,nan
+Jennifer Lopez,0.6,2,0,0,nan
+Jennifer Lopez,0.7,2,0,0,nan
+Jennifer Lopez,0.8,2,0,0,nan
+Jennifer Lopez,0.9,2,0,0,nan
+Jennifer Lopez,1.0,2,0,0,nan
+Jennifer Lopez,0.0,3,1,1,0.43294641375541687
+Jennifer Lopez,0.1,3,1,1,0.45173346996307373
+Jennifer Lopez,0.2,3,1,1,0.39953863620758057
+Jennifer Lopez,0.3,3,1,0,0.2648610770702362
+Jennifer Lopez,0.4,3,1,0,0.02973487228155136
+Jennifer Lopez,0.5,3,0,0,nan
+Jennifer Lopez,0.6,3,0,0,nan
+Jennifer Lopez,0.7,3,0,0,nan
+Jennifer Lopez,0.8,3,0,0,nan
+Jennifer Lopez,0.9,3,0,0,nan
+Jennifer Lopez,1.0,3,0,0,nan
+Jennifer Lopez,0.0,4,1,1,0.43115147948265076
+Jennifer Lopez,0.1,4,1,1,0.5886845588684082
+Jennifer Lopez,0.2,4,1,1,0.3965710997581482
+Jennifer Lopez,0.3,4,1,0,0.1410965770483017
+Jennifer Lopez,0.4,4,0,0,nan
+Jennifer Lopez,0.5,4,0,0,nan
+Jennifer Lopez,0.6,4,0,0,nan
+Jennifer Lopez,0.7,4,0,0,nan
+Jennifer Lopez,0.8,4,0,0,nan
+Jennifer Lopez,0.9,4,0,0,nan
+Jennifer Lopez,1.0,4,0,0,nan
+Jennifer Lopez,0.0,5,1,1,0.6283634901046753
+Jennifer Lopez,0.1,5,1,1,0.6006904244422913
+Jennifer Lopez,0.2,5,1,1,0.5230473875999451
+Jennifer Lopez,0.3,5,1,0,0.35391777753829956
+Jennifer Lopez,0.4,5,0,0,nan
+Jennifer Lopez,0.5,5,0,0,nan
+Jennifer Lopez,0.6,5,0,0,nan
+Jennifer Lopez,0.7,5,0,0,nan
+Jennifer Lopez,0.8,5,0,0,nan
+Jennifer Lopez,0.9,5,0,0,nan
+Jennifer Lopez,1.0,5,0,0,nan

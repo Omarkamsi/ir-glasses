@@ -70,6 +70,34 @@ python demo.py                    # -> demo_panel.png (headless, works anywhere)
 python demo.py --webcam           # live, needs a camera + display
 ```
 
+## Multi-subject / multi-model study (defensible results)
+
+The single-face run above is a quick sanity check. For report-grade results, evaluate
+across many subjects and models. The faces come from **LFW** (Labeled Faces in the Wild),
+auto-downloaded by scikit-learn — a standard, citable FR benchmark, no personal data
+needed. Each subject is enrolled on one clean image and tested on disjoint held-out images.
+
+```bash
+# multi-subject curves with 95% confidence bands (recognition collapses before detection)
+python experiment.py --dataset lfw --subjects 15 --per-subject 6   # -> results_rates.png
+
+# same sweep across two FR models (YuNet+SFace vs dlib ResNet-128) with a
+# "disruption threshold" (intensity where recognition drops below 50%) per model
+python compare_models.py                                           # -> model_comparison.png
+
+# WHERE it works: recognition rate over (IR intensity x camera IR-cut strength).
+# Low IR-cut (night) = technique works; high IR-cut (daylight) = technique fails.
+python boundary.py                                                 # -> boundary_heatmap.png
+
+# assemble the above into one poster/report figure
+python report_panel.py                                             # -> report_panel.png
+```
+
+The dlib backend is used **directly** (not via the `face_recognition` wrapper). Drop its
+two model files into `models/` (see `requirements.txt`): `sp5.dat` (5-point shape
+predictor) and `dlib_resnet.dat` (ResNet-128), both from <http://dlib.net/files/>. Model
+files are gitignored.
+
 ## From simulation to real hardware
 
 Before the glasses work, `experiment.py` and `demo.py` use `ir_simulator` to model the effect.
