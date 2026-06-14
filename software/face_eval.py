@@ -26,6 +26,8 @@ import cv2
 MODELS_DIR = os.path.join(os.path.dirname(__file__), "models")
 YUNET = os.path.join(MODELS_DIR, "face_detection_yunet_2023mar.onnx")
 SFACE = os.path.join(MODELS_DIR, "face_recognition_sface_2021dec.onnx")
+DLIB_SP = os.path.join(MODELS_DIR, "sp5.dat")               # 5-point landmark predictor
+DLIB_REC = os.path.join(MODELS_DIR, "dlib_resnet.dat")      # ResNet-128 face descriptor
 
 
 class FaceEvaluator:
@@ -49,11 +51,13 @@ class FaceEvaluator:
             return backend
         if os.path.exists(YUNET) and os.path.exists(SFACE) and hasattr(cv2, "FaceDetectorYN"):
             return "opencv"
-        try:
-            import face_recognition  # noqa
-            return "dlib"
-        except Exception:
-            return "haar"
+        if os.path.exists(DLIB_SP) and os.path.exists(DLIB_REC):
+            try:
+                import dlib  # noqa
+                return "dlib"
+            except Exception:
+                pass
+        return "haar"
 
     def _init_backend(self):
         if self.backend == "opencv":
@@ -61,8 +65,11 @@ class FaceEvaluator:
                                                       score_threshold=0.6)
             self.recognizer = cv2.FaceRecognizerSF.create(SFACE, "")
         elif self.backend == "dlib":
-            import face_recognition
-            self._fr = face_recognition
+            import dlib
+            self._dlib = dlib
+            self._dlib_det = dlib.get_frontal_face_detector()
+            self._dlib_sp = dlib.shape_predictor(DLIB_SP)
+            self._dlib_rec = dlib.face_recognition_model_v1(DLIB_REC)
         else:  # haar
             cascade = os.path.join(cv2.data.haarcascades,
                                    "haarcascade_frontalface_default.xml")
@@ -82,10 +89,10 @@ class FaceEvaluator:
                     results.append({"box": (x, y, bw, bh), "conf": float(f[-1]), "raw": f})
         elif self.backend == "dlib":
             rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-            locs = self._fr.face_locations(rgb)  # (top, right, bottom, left)
-            for (t, r, b, l) in locs:
-                results.append({"box": (l, t, r - l, b - t), "conf": 1.0,
-                                "raw": (t, r, b, l), "_rgb": rgb})
+            for d in self._dlib_det(rgb, 1):
+                results.append({"box": (d.left(), d.top(),
+                                        d.right() - d.left(), d.bottom() - d.top()),
+                                "conf": 1.0, "raw": d, "_rgb": rgb})
         else:  # haar
             gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
             boxes = self.detector.detectMultiScale(gray, 1.1, 5, minSize=(60, 60))
@@ -105,8 +112,8 @@ class FaceEvaluator:
             return np.asarray(feat).flatten()
         elif self.backend == "dlib":
             rgb = det.get("_rgb", cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
-            encs = self._fr.face_encodings(rgb, known_face_locations=[det["raw"]])
-            return encs[0] if encs else None
+            shape = self._dlib_sp(rgb, det["raw"])
+            return np.array(self._dlib_rec.compute_face_descriptor(rgb, shape))
         else:  # haar: coarse normalised grayscale vector
             x, y, w, h = det["box"]
             crop = img[max(0, y):y + h, max(0, x):x + w]
