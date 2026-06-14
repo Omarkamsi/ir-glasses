@@ -19,6 +19,13 @@ All three scale with `intensity` in [0, 1].
 import numpy as np
 import cv2
 
+# Calibration of the abstract intensity knob. The LED control knob maps to delivered IR
+# light super-linearly, so we apply a gamma response. Calibrated (gamma=2.0) so the
+# simulated disruption transition spans the middle of the [0,1] axis rather than
+# collapsing in the first third — i.e. the knob's dynamic range is well distributed.
+# The real hardware will set the true physical mapping; this only scales the simulation.
+INTENSITY_GAMMA = 2.0
+
 
 def _radial_hotspot(h, w, center, radius, strength):
     """A soft circular glare blob centred at `center`."""
@@ -48,8 +55,8 @@ def apply_ir_disruption(img, face_box=None, intensity=0.6,
     h, w = img.shape[:2]
     out = img.astype(np.float32)
 
-    # Effective intensity after the camera's IR-cut filter attenuates the IR light.
-    eff = intensity * (1.0 - float(np.clip(ir_cut, 0.0, 1.0)))
+    # Effective intensity: gamma-calibrated LED response, then linear IR-cut attenuation.
+    eff = (float(intensity) ** INTENSITY_GAMMA) * (1.0 - float(np.clip(ir_cut, 0.0, 1.0)))
 
     # Where to put the LED hotspots
     if face_box is not None:
