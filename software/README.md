@@ -19,10 +19,12 @@ face and real captured frames as the hardware comes online.
 
 ```bash
 pip install -r requirements.txt
+python download_models.py      # fetches all four models (OpenCV + dlib) into ./models/
 ```
 
-That alone runs the whole suite using a built-in fallback detector (the Haar backend), which is
-enough to validate everything. For real, publication-quality numbers, enable one DL backend:
+`pip install` alone runs the whole suite using a built-in fallback detector (the Haar
+backend). `download_models.py` then enables the real DL backends (idempotent — re-running
+skips existing files). For real, publication-quality numbers, enable one DL backend:
 
 ### Backend A — OpenCV YuNet + SFace (recommended)
 
@@ -57,8 +59,8 @@ python ir_simulator.py            # -> ir_sim_demo.png
 # 2) Sanity-check the recognition pipeline
 python face_eval.py
 
-# 3) Test the camera detector
-python camera_detect.py           # -> camera_detect_demo.png
+# 3) Test the camera detector (+ precision/recall over synthetic scenes)
+python camera_detect.py           # -> camera_detect_demo.png, camera_eval.png
 
 # 4) Run the full experiment -> CSV + report figures
 python experiment.py --seeds 12              # simulated, bundled face
