@@ -2,13 +2,17 @@
 opencv-contrib-python>=4.8
 numpy
 matplotlib
-scikit-image            # only used to load the bundled sample face for testing
+scikit-image            # bundled sample face for the single-face quick test
+scikit-learn            # LFW benchmark dataset (sklearn.datasets.fetch_lfw_people)
+pytest                  # unit tests (dev)
 
 # ---- Optional DL backends (choose ONE for real-quality results) ----
 # Option A — OpenCV YuNet + SFace (recommended: small, fast CNNs)
 #   No extra pip install needed (ships with opencv-contrib-python).
 #   Just download the two ONNX models into ./models/ (see README).
 #
-# Option B — dlib / face_recognition (ResNet 128-D embeddings)
-#   pip install face_recognition
-#   (pulls in dlib; needs cmake + a C++ compiler the first time)
+# Option B — dlib ResNet-128 (used directly, not the face_recognition wrapper)
+#   pip install dlib        (needs cmake + a C++ compiler the first time)
+#   Model files into ./models/, from http://dlib.net/files/ :
+#     shape_predictor_5_face_landmarks.dat            -> models/sp5.dat
+#     dlib_face_recognition_resnet_model_v1.dat       -> models/dlib_resnet.dat
