@@ -29,7 +29,7 @@ def _radial_hotspot(h, w, center, radius, strength):
 
 
 def apply_ir_disruption(img, face_box=None, intensity=0.6,
-                        banding=True, seed=None):
+                        banding=True, seed=None, ir_cut=0.0):
     """
     Apply synthetic IR disruption to a BGR image.
 
@@ -37,6 +37,9 @@ def apply_ir_disruption(img, face_box=None, intensity=0.6,
     face_box  : (x, y, w, h) of the face to target; if None, targets image centre
     intensity : 0..1 strength of the effect
     banding   : add rolling-shutter style horizontal bands
+    ir_cut    : 0..1 camera IR-cut-filter strength. 0 = night / IR-illuminated / no-cut
+                camera (full effect); 1 = daylight with a strong IR-cut filter (effect
+                largely removed). Models WHERE the technique works vs fails.
     returns   : disrupted uint8 BGR image
     """
     if seed is not None:
@@ -44,6 +47,9 @@ def apply_ir_disruption(img, face_box=None, intensity=0.6,
 
     h, w = img.shape[:2]
     out = img.astype(np.float32)
+
+    # Effective intensity after the camera's IR-cut filter attenuates the IR light.
+    eff = intensity * (1.0 - float(np.clip(ir_cut, 0.0, 1.0)))
 
     # Where to put the LED hotspots
     if face_box is not None:
@@ -56,24 +62,24 @@ def apply_ir_disruption(img, face_box=None, intensity=0.6,
 
     # 1) Two LED hotspots around the brow + one at the bridge
     glare = np.zeros((h, w), np.float32)
-    led_strength = 255.0 * intensity
-    led_radius = 0.18 * span * (0.7 + intensity)
+    led_strength = 255.0 * eff
+    led_radius = 0.18 * span * (0.7 + eff)
     offsets = [(-0.22, -0.15), (0.22, -0.15), (0.0, 0.0)]
     for dx, dy in offsets:
         glare += _radial_hotspot(h, w, (cx + dx * span, cy + dy * span),
                                  led_radius, led_strength)
 
     # 2) Broad wash-out over the whole face ROI (sensor saturation)
-    wash = _radial_hotspot(h, w, (cx, cy), 0.55 * span, 120.0 * intensity)
+    wash = _radial_hotspot(h, w, (cx, cy), 0.55 * span, 120.0 * eff)
     glare += wash
 
     out += glare[..., None]
 
     # 3) Rolling-shutter banding: horizontal sinusoidal brightness ripple
-    if banding and intensity > 0:
+    if banding and eff > 0:
         rows = np.arange(h)
         band = (np.sin(rows / 6.0 + np.random.uniform(0, 6.28)) * 0.5 + 0.5)
-        band = band * (90.0 * intensity)
+        band = band * (90.0 * eff)
         out += band[:, None, None]
 
     return np.clip(out, 0, 255).astype(np.uint8)
