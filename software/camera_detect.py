@@ -66,6 +66,47 @@ class LensGlintDetector:
         return out
 
 
+def _match(truth, hits, tol):
+    """Greedily match detections to ground-truth lens centres within `tol` pixels.
+    Returns (true_positives, false_positives, false_negatives)."""
+    used = set()
+    tp = 0
+    for h in hits:
+        cx, cy = h["center"]
+        best, best_d = None, tol
+        for i, (tx, ty) in enumerate(truth):
+            if i in used:
+                continue
+            d = ((cx - tx) ** 2 + (cy - ty) ** 2) ** 0.5
+            if d <= best_d:
+                best, best_d = i, d
+        if best is not None:
+            used.add(best)
+            tp += 1
+    fp = len(hits) - tp
+    fn = len(truth) - tp
+    return tp, fp, fn
+
+
+def evaluate_glint_detector(n_scenes=60, tol=12, bright_thresh=210, seed0=0):
+    """Quantify the lens-glint detector over many synthetic scenes with known ground
+    truth. Returns precision / recall / F1 and false-positives-per-scene — the same kind
+    of metrics the face-recognition pipeline reports, for the 'smart trigger' feature."""
+    det = LensGlintDetector(bright_thresh=bright_thresh)
+    TP = FP = FN = 0
+    for k in range(n_scenes):
+        n_lenses = 1 + (k % 3)                     # 1..3 lenses per scene
+        scene, truth = _make_synthetic_scene(n_lenses=n_lenses, seed=seed0 + k)
+        tp, fp, fn = _match(truth, det.detect(scene), tol)
+        TP += tp; FP += fp; FN += fn
+    prec = TP / (TP + FP) if (TP + FP) else 0.0
+    rec = TP / (TP + FN) if (TP + FN) else 0.0
+    f1 = 2 * prec * rec / (prec + rec) if (prec + rec) else 0.0
+    return {"precision": prec, "recall": rec, "f1": f1,
+            "fp_per_scene": FP / n_scenes, "n_scenes": n_scenes,
+            "tp": TP, "fp": FP, "fn": FN}
+
+
 def cnn_camera_detector_stub(frame):
     """
     Placeholder for an optional trained 'surveillance camera' detector.
@@ -101,3 +142,33 @@ if __name__ == "__main__":
               f"circ={h['circularity']:.2f} bright={h['brightness']:.0f}")
     cv2.imwrite("camera_detect_demo.png", det.annotate(scene, hits))
     print("wrote camera_detect_demo.png")
+
+    # ---- quantitative evaluation: precision/recall over many synthetic scenes ----
+    m = evaluate_glint_detector(n_scenes=120)
+    print(f"\nlens-glint detector over {m['n_scenes']} scenes: "
+          f"precision={m['precision']:.2f} recall={m['recall']:.2f} "
+          f"F1={m['f1']:.2f} FP/scene={m['fp_per_scene']:.2f}")
+
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    thresholds = list(range(170, 246, 5))
+    precs = [evaluate_glint_detector(n_scenes=120, bright_thresh=t)["precision"]
+             for t in thresholds]
+    recs = [evaluate_glint_detector(n_scenes=120, bright_thresh=t)["recall"]
+            for t in thresholds]
+    plt.figure(figsize=(7, 4.5))
+    plt.plot(thresholds, precs, "o-", label="Precision", linewidth=2)
+    plt.plot(thresholds, recs, "s-", label="Recall", linewidth=2)
+    plt.axvline(det.bright_thresh, color="gray", linestyle=":",
+                label=f"operating point ({det.bright_thresh})")
+    plt.xlabel("Brightness threshold")
+    plt.ylabel("Score")
+    plt.title("Lens-glint camera detector — precision/recall vs threshold")
+    plt.ylim(-0.05, 1.05)
+    plt.grid(alpha=0.3)
+    plt.legend()
+    plt.tight_layout()
+    plt.savefig("camera_eval.png", dpi=140)
+    plt.close()
+    print("wrote camera_eval.png")
