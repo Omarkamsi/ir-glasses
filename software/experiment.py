@@ -28,6 +28,7 @@ import matplotlib.pyplot as plt
 
 from face_eval import FaceEvaluator
 from ir_simulator import apply_ir_disruption
+from stats import wilson_interval
 
 
 def load_reference(image_path):
@@ -46,10 +47,30 @@ def run_simulated(ev, ref_img, ref_emb, levels, seeds):
         for s in seeds:
             frame = apply_ir_disruption(ref_img, intensity=lv, seed=s)
             r = ev.evaluate(frame, ref_emb)
-            rows.append({"intensity": lv, "seed": s,
+            rows.append({"subject": "bundled", "intensity": lv, "seed": s,
                          "detected": int(r["detected"]),
                          "recognized": int(r["recognized"]),
                          "score": r["score"] if r["score"] is not None else np.nan})
+    return rows
+
+
+def run_dataset(ev, subjects, levels):
+    """Multi-subject simulated sweep. Enroll each subject's clean image, then apply IR
+    disruption to each held-out test image across intensities. This is the statistically
+    defensible counterpart to run_simulated (n subjects, not n=1)."""
+    rows = []
+    for s in subjects:
+        ref = ev.enroll(s["enroll"])
+        for ti, img in enumerate(s["test"]):
+            dets = ev.detect(img)
+            box = dets[0]["box"] if dets else None
+            for lv in levels:
+                frame = apply_ir_disruption(img, face_box=box, intensity=lv, seed=ti)
+                r = ev.evaluate(frame, ref)
+                rows.append({"subject": s["name"], "intensity": lv, "seed": ti,
+                             "detected": int(r["detected"]),
+                             "recognized": int(r["recognized"]),
+                             "score": r["score"] if r["score"] is not None else np.nan})
     return rows
 
 
@@ -68,7 +89,7 @@ def run_real(ev, ref_emb, real_dir):
             if img is None:
                 continue
             r = ev.evaluate(img, ref_emb)
-            rows.append({"intensity": lv, "seed": i,
+            rows.append({"subject": sub, "intensity": lv, "seed": i,
                          "detected": int(r["detected"]),
                          "recognized": int(r["recognized"]),
                          "score": r["score"] if r["score"] is not None else np.nan})
@@ -83,9 +104,14 @@ def aggregate(rows):
         det = np.mean([r["detected"] for r in sub])
         rec = np.mean([r["recognized"] for r in sub])
         scores = [r["score"] for r in sub if not np.isnan(r["score"])]
+        n = len(sub)
+        det_lo, det_hi = wilson_interval(int(np.sum([r["detected"] for r in sub])), n)
+        rec_lo, rec_hi = wilson_interval(int(np.sum([r["recognized"] for r in sub])), n)
         agg[lv] = {"det_rate": det, "rec_rate": rec,
                    "score_mean": np.mean(scores) if scores else np.nan,
-                   "score_std": np.std(scores) if scores else np.nan}
+                   "score_std": np.std(scores) if scores else np.nan,
+                   "n": n, "det_lo": det_lo, "det_hi": det_hi,
+                   "rec_lo": rec_lo, "rec_hi": rec_hi}
     return levels, agg
 
 
@@ -95,6 +121,11 @@ def plot_rates(levels, agg, backend, out="results_rates.png"):
     plt.figure(figsize=(7, 4.5))
     plt.plot(levels, det, "o-", label="Face detected", linewidth=2)
     plt.plot(levels, rec, "s-", label="Identity recognised", linewidth=2)
+    if all("det_lo" in agg[l] for l in levels):
+        plt.fill_between(levels, [agg[l]["det_lo"] * 100 for l in levels],
+                         [agg[l]["det_hi"] * 100 for l in levels], alpha=0.15)
+        plt.fill_between(levels, [agg[l]["rec_lo"] * 100 for l in levels],
+                         [agg[l]["rec_hi"] * 100 for l in levels], alpha=0.15)
     plt.xlabel("IR disruption intensity")
     plt.ylabel("Success rate (%)")
     plt.title(f"Face detection & recognition vs IR intensity  ({backend} backend)")
@@ -130,24 +161,36 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--image", default=None, help="reference face image (else bundled face)")
     ap.add_argument("--real-dir", default=None, help="dir of real captures by intensity")
+    ap.add_argument("--dataset", default=None, help="'lfw' for the multi-subject benchmark")
+    ap.add_argument("--subjects", type=int, default=15, help="LFW subjects (dataset mode)")
+    ap.add_argument("--per-subject", type=int, default=6, help="test images per subject")
     ap.add_argument("--backend", default="auto")
     ap.add_argument("--seeds", type=int, default=12, help="repeats per intensity (simulated)")
     args = ap.parse_args()
 
     ev = FaceEvaluator(backend=args.backend)
-    ref_img = load_reference(args.image)
-    ref_emb = ev.enroll(ref_img)
-    print("enrolled reference, dim =", len(ref_emb))
 
-    if args.real_dir:
+    if args.dataset == "lfw":
+        from dataset import load_lfw_subjects
+        levels = [round(0.1 * i, 1) for i in range(0, 11)]
+        subjects = load_lfw_subjects(ev, n_subjects=args.subjects,
+                                     per_subject=args.per_subject)
+        print(f"loaded {len(subjects)} LFW subjects")
+        rows = run_dataset(ev, subjects, levels)
+    elif args.real_dir:
+        ref_emb = ev.enroll(load_reference(args.image))
+        print("enrolled reference, dim =", len(ref_emb))
         rows = run_real(ev, ref_emb, args.real_dir)
     else:
+        ref_img = load_reference(args.image)
+        ref_emb = ev.enroll(ref_img)
+        print("enrolled reference, dim =", len(ref_emb))
         levels = [round(0.1 * i, 1) for i in range(0, 11)]
         seeds = list(range(args.seeds))
         rows = run_simulated(ev, ref_img, ref_emb, levels, seeds)
 
     with open("results.csv", "w", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=["intensity", "seed", "detected",
+        w = csv.DictWriter(f, fieldnames=["subject", "intensity", "seed", "detected",
                                           "recognized", "score"])
         w.writeheader()
         w.writerows(rows)
