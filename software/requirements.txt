@@ -1,0 +1,14 @@
+# Core (required) — these run the whole suite with the Haar fallback backend
+opencv-contrib-python>=4.8
+numpy
+matplotlib
+scikit-image            # only used to load the bundled sample face for testing
+
+# ---- Optional DL backends (choose ONE for real-quality results) ----
+# Option A — OpenCV YuNet + SFace (recommended: small, fast CNNs)
+#   No extra pip install needed (ships with opencv-contrib-python).
+#   Just download the two ONNX models into ./models/ (see README).
+#
+# Option B — dlib / face_recognition (ResNet 128-D embeddings)
+#   pip install face_recognition
+#   (pulls in dlib; needs cmake + a C++ compiler the first time)

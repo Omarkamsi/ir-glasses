@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Model weights (downloaded separately - see software/README.md)
+*.onnx
+*.dat
+
+# Real capture data (large / personal)
+captures/
+software/captures/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Office temp files
+~$*
