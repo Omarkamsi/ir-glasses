@@ -1,0 +1,29 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install system libs for OpenCV
+        run: sudo apt-get update && sudo apt-get install -y libgl1 libglib2.0-0
+
+      - name: Install Python dependencies
+        run: pip install -r software/requirements.txt
+
+      - name: Run test suite
+        # Model- and dataset-dependent tests skip automatically when the (gitignored)
+        # model files / LFW download are absent, so CI runs the logic, simulator,
+        # calibration and camera-detector tests without heavy downloads or a dlib build.
+        working-directory: software
+        run: python -m pytest tests/ -v
