@@ -10,12 +10,16 @@ Senior design project (Computer Engineering). The novelty is not the gadget — 
 face recognition are known (see reference below) — but the **quantified, hypothesis-driven
 evaluation** of where the technique works and where it fails.
 
+> **New here?** [`PROJECT_SUMMARY.md`](PROJECT_SUMMARY.md) is the single-page overview of the
+> whole project — findings, structure, status, and what remains.
+
 ## Repository layout
 
 ```
 .
-├── docs/        Project proposal + hardware build guide
+├── docs/        Proposal, build guide, parts list, capture protocol, design docs
 ├── firmware/    ESP32-C3 firmware that drives the pulsed IR-LED array
+├── hardware/    Power + IEC 62471 safety calculators, schematic generator
 └── software/    DL evaluation pipeline, IR simulator, camera detector, experiments, demo
 ```
 
