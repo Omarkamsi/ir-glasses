@@ -1,7 +1,14 @@
-import os, cv2, numpy as np
+import os, importlib.util
+import cv2, numpy as np
+import pytest
 from skimage import data
-from face_eval import FaceEvaluator
+from face_eval import FaceEvaluator, DLIB_SP, DLIB_REC
 from ir_simulator import apply_ir_disruption
+
+pytestmark = pytest.mark.skipif(
+    importlib.util.find_spec("dlib") is None
+    or not (os.path.exists(DLIB_SP) and os.path.exists(DLIB_REC)),
+    reason="dlib and/or its model files are not available")
 
 
 def test_dlib_backend_enrolls_and_matches_clean_face():

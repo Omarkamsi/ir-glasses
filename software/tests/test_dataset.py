@@ -1,6 +1,14 @@
+import os, importlib.util
 import numpy as np
+import pytest
+from face_eval import FaceEvaluator, YUNET, SFACE
+
+pytestmark = pytest.mark.skipif(
+    importlib.util.find_spec("sklearn") is None
+    or not (os.path.exists(YUNET) and os.path.exists(SFACE)),
+    reason="scikit-learn or the OpenCV model files are not available")
+
 from dataset import load_lfw_subjects
-from face_eval import FaceEvaluator
 
 
 def test_lfw_subjects_shape_and_disjoint():
