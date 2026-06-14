@@ -28,7 +28,7 @@ import matplotlib.pyplot as plt
 
 from face_eval import FaceEvaluator
 from ir_simulator import apply_ir_disruption
-from stats import wilson_interval
+from stats import wilson_interval, baseline_correct
 
 
 def load_reference(image_path):
@@ -119,8 +119,11 @@ def plot_rates(levels, agg, backend, out="results_rates.png"):
     det = [agg[l]["det_rate"] * 100 for l in levels]
     rec = [agg[l]["rec_rate"] * 100 for l in levels]
     plt.figure(figsize=(7, 4.5))
+    rec_bc = [v * 100 for v in baseline_correct([agg[l]["rec_rate"] for l in levels])]
     plt.plot(levels, det, "o-", label="Face detected", linewidth=2)
     plt.plot(levels, rec, "s-", label="Identity recognised", linewidth=2)
+    plt.plot(levels, rec_bc, "--", color="gray", alpha=0.8,
+             label="Recognition (baseline-corrected)")
     if all("det_lo" in agg[l] for l in levels):
         plt.fill_between(levels, [agg[l]["det_lo"] * 100 for l in levels],
                          [agg[l]["det_hi"] * 100 for l in levels], alpha=0.15)
@@ -196,11 +199,12 @@ def main():
         w.writerows(rows)
 
     levels, agg = aggregate(rows)
-    print("\nintensity | detect% | recog% | mean score")
-    for l in levels:
+    rec_bc = baseline_correct([agg[l]["rec_rate"] for l in levels])
+    print("\nintensity | detect% | recog% | recog%(base-corr) | mean score")
+    for l, bc in zip(levels, rec_bc):
         a = agg[l]
         print(f"   {l:>4}   |  {a['det_rate']*100:5.0f}  | {a['rec_rate']*100:5.0f}  | "
-              f"{a['score_mean']:.3f}")
+              f"     {bc*100:5.0f}        | {a['score_mean']:.3f}")
 
     f1 = plot_rates(levels, agg, ev.backend)
     f2 = plot_scores(levels, agg, ev.recog_threshold, ev.backend)

@@ -1,4 +1,13 @@
-from stats import wilson_interval
+from stats import wilson_interval, baseline_correct
+
+
+def test_baseline_correct_normalizes_to_clean():
+    # clean (first) rate is the baseline -> becomes 1.0; others scale relative to it
+    assert baseline_correct([0.8, 0.4, 0.0]) == [1.0, 0.5, 0.0]
+
+
+def test_baseline_correct_zero_baseline_passthrough():
+    assert baseline_correct([0.0, 0.0]) == [0.0, 0.0]
 
 
 def test_wilson_midpoint_and_bounds():
