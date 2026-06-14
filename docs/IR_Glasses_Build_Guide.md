@@ -6,11 +6,17 @@ proof-of-concept, scale to the full array, and integrate into the frame. The eva
 
 ---
 
+> **Quick links:** consolidated shopping list → [`Parts_List.md`](Parts_List.md) ·
+> capture protocol → [`Data_Capture_Protocol.md`](Data_Capture_Protocol.md) ·
+> calculators → `hardware/power_budget.py`, `hardware/safety_iec62471.py` ·
+> schematic figure → `hardware/schematic.py` → `hardware/schematic.png`.
+
 ## 1. Bill of Materials
 
 Order the AliExpress items **on day one** — shipping to Jordan is typically 2–4 weeks, which is a big
 chunk of your 6-week window. Common passives, the frame, wire, and tools you can usually get same-week
-from a local electronics/hobby shop in Amman.
+from a local electronics/hobby shop in Amman. A ready-to-buy checklist with spares and cost estimates
+is in [`Parts_List.md`](Parts_List.md).
 
 | # | Item | Spec / what to search | Qty | ~Unit (USD) | Source |
 |---|------|-----------------------|-----|-------------|--------|
@@ -66,6 +72,9 @@ what produces the rolling-shutter banding that corrupts the captured frame.
 | Battery divider mid-point | ESP32 `GPIO3` (ADC) | optional 100k/100k from LiPo+ to GND |
 | TP4056 B+ / B− | LiPo + / − | charge the cell through this module |
 
+A rendered schematic + frame-layout figure is at `hardware/schematic.png` (regenerate with
+`python hardware/schematic.py`). The ASCII below is the quick reference:
+
 ### Simplified schematic
 
 ```
@@ -101,6 +110,12 @@ Worked example with 4 LEDs at 150 mA peak, 15 % duty:
 A 300 mAh LiPo → roughly **1.5–2 hours** of runtime. Measure your real numbers with the multimeter and
 put the comparison (theoretical vs measured) in your report — that's easy, credible engineering content.
 
+Run the numbers for your own configuration:
+
+```bash
+python hardware/power_budget.py --leds 4 --peak-ma 150 --battery-mah 300
+```
+
 ---
 
 ## 5. Assembly — do it in this order
@@ -120,6 +135,11 @@ put the comparison (theoretical vs measured) in your report — that's easy, cre
 
 ## 6. Test & verification
 
+- **Flashing & control.** The firmware compiles on ESP32 Arduino core **2.x and 3.x** with no
+  edits. The button cycles preset modes; over USB serial (115200 baud) you also get a command
+  interface — `H` for help, `I<0-100>` to set intensity, `F<hz>` frequency, `M<0-3>` preset,
+  `S` status. The `I` command is what you use for controlled data capture (see
+  [`Data_Capture_Protocol.md`](Data_Capture_Protocol.md)).
 - **IR is invisible to you but not to a camera.** Point a phone camera (front "selfie" cameras usually
   lack an IR-cut filter and work best) at the LEDs while the firmware runs — you should see them flashing
   bright white/purple on screen. That's your proof they're emitting.
@@ -136,11 +156,15 @@ put the comparison (theoretical vs measured) in your report — that's easy, cre
   Keep average current modest, never stare into the array at close range, and always aim the LEDs
   **outward**, away from the wearer and bystanders' eyes.
 - Reference **IEC 62471** (photobiological safety of lamps) in your report and do a back-of-envelope
-  irradiance check for your final LED count — examiners value that you considered it.
+  irradiance check for your final LED count — examiners value that you considered it. The script
+  `hardware/safety_iec62471.py` does this worked example (corneal/lens IR irradiance vs the
+  100 W/m² limit) — e.g. `python hardware/safety_iec62471.py --leds 6 --optical-w 0.25`.
 - Be clear in your writeup: the device **saturates a camera sensor**; it does **not** harm human vision.
 - Thermal: verify the LEDs/MOSFET don't overheat during extended runs.
 
 ---
 
-*Next document (Weeks 4–6): the Python face-detection/recognition evaluation pipeline — captures frames,
-runs them through the DL models, and produces your recognition-accuracy-vs-IR-parameter graphs.*
+*Next step once the hardware works: capture real frames following
+[`Data_Capture_Protocol.md`](Data_Capture_Protocol.md), then run them through the existing
+evaluation pipeline (`software/experiment.py --real-dir captures/`) — same metrics and figures
+as the simulated study, now on measured data.*
